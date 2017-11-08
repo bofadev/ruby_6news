@@ -37,8 +37,13 @@
 	</script>
 
 	<script>
-		function openNav() {
+		function openNav(owner) {
 		    document.getElementById("focusView").style.width = "100%";
+
+		    document.getElementById("focus-view-title").innerHTML = owner.innerHTML;
+		    document.getElementById("focus-view-title").href = "http://google.com";
+		    
+		    document.getElementById("focus-view-body").innerHTML = "FILLER TEXT";
 		}
 
 		function closeNav() {
