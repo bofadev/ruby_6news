@@ -1,56 +1,61 @@
-<div class="wrapper">
+<div class="wrapper"></div>
 
-    <nav id="sidebar">
-        <!-- Sidebar Header -->
-        <div class="sidebar-header">
-            <h3>6 News</h3>
-        </div>
+<div class="row">
 
-        <!-- Sidebar Links -->
-        <ul class="list-unstyled components">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">About</a></li>
-        </ul>
-    </nav>
-
-    <div id="text-carousel" class="carousel slide" data-ride="carousel">
-	    <!-- Wrapper for slides -->
-	    <div class="row">
-	        <div class="col-xs-offset-3 col-xs-6">
-	            <div class="carousel-inner">
-	                <div class="item active">
-	                    <div class="carousel-content">
-	                        <div>
-	                            <p>One</p>
-	                        </div>
-	                    </div>
-	                </div>
-	                <div class="item">
-	                    <div class="carousel-content">
-	                        <div>             
-	                            <p>Two</p>
-	                        </div>
-	                    </div>
-	                </div>
-	                <div class="item">
-	                    <div class="carousel-content">
-	                        <div>                          
-	                            <p>Three</p>
-	                        </div>
-	                    </div>
-	                </div>
-	                
-	            </div>
+	<div class="col-xs-3">
+	    <nav id="sidebar">
+	        <!-- Sidebar Header -->
+	        <div class="sidebar-header">
+	            <h3>5 News</h3>
 	        </div>
-	    </div>
-	    <!-- Controls --> <a class="left carousel-control" href="#text-carousel" data-slide="prev">
-	    <span class="glyphicon glyphicon-chevron-left"></span>
-	  </a>
-	 <a class="right carousel-control" href="#text-carousel" data-slide="next">
-	    <span class="glyphicon glyphicon-chevron-right"></span>
-	  </a>
 
-	</div>
+	        <!-- Sidebar Links -->
+	        <ul class="list-unstyled components">
+	            <li class="active"><a href="#">Home</a></li>
+	            <li><a href="#">Login</a></li>
+	            <li><a href="#">About</a></li>
+	        </ul>
+	    </nav>
+	</div>	
+	
+	<div class="col-xs-9">
+    	<% for i in 1..5 %>
+	    		<div class="row">
+	    			<div class="col-xs-12">
+				 		<!-- Carousel --> 
+					    <div id="text-carousel<%="#{i}"%>" class="carousel slide" data-ride="carousel">
+						    <!-- Wrapper for slides -->
+				            <div id="text-carousel-inner<%="#{i}"%>" class="carousel-inner">
+				                <div class="item active">
+				                    <div class="carousel-content">
+				                        <div>
+				                            <p>DEM DEFEATS TRUMP PLAYBOOK IN VA
+</p>
+				                        </div>
+				                    </div>
+				                </div>
+				                <div class="item">
+				                    <div class="carousel-content">
+				                        <div>             
+				                            <p>Two</p>
+				                        </div>
+				                    </div>
+				                </div>
+				                <div class="item">
+				                    <div class="carousel-content">
+				                        <div>                          
+				                            <p>Three</p>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+						    <!-- Controls --> 
+						    <a class="left carousel-control" href="#text-carousel<%="#{i}"%>" data-slide="prev"></a>
+						 	<a class="right carousel-control" href="#text-carousel<%="#{i}"%>" data-slide="next"></a>
+						</div>
+			    	</div>
+				</div>
+	 	<% end %>
+ 	</div>
 
 </div>
