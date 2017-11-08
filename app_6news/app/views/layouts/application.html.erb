@@ -13,9 +13,37 @@
   	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script>
-	  $( document ).ready(function(){
-	  $('#mycarousel').carousel();
-	  });
+   	 
+	$( document ).ready(function(){
+
+	 	// Activate Carousel
+		<% for i in 1..5 %>
+	    $("#text-carousel<%="#{i}"%>").carousel();
+		<%end%>
+
+		// Enable Carousel Controls
+		$("#click-prev").click(function(){
+			<% for i in 1..5 %>
+		    $("#text-carousel<%="#{i}"%>").carousel("prev");
+			<%end%>
+		});
+		$("#click-next").click(function(){
+			<% for i in 1..5 %>
+		    $("#text-carousel<%="#{i}"%>").carousel("next");
+			<%end%>
+		});
+	});
+
+	</script>
+
+	<script>
+		function openNav() {
+		    document.getElementById("focusView").style.width = "100%";
+		}
+
+		function closeNav() {
+		    document.getElementById("focusView").style.width = "0";
+		}
 	</script>
 
   </head>

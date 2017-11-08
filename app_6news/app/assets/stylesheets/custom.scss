@@ -87,11 +87,14 @@ ul ul a {
     background-color: #555;
 }
 
+.carousel-content p:hover{
+	color: #ff68e8;
+}
 
 .carousel-control.left, .carousel-control.right {
-    background-image: none;
     background:rgba(0,0,0,0);
 }
+
 
 .row
 {
@@ -111,6 +114,70 @@ ul ul a {
 
 .col-xs-12
 {
-	padding-top: 20px;
+	padding-top: 30px;
 	padding-bottom: 30px;
+}
+
+.carousel-arrow-prev
+{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #d1c877;
+}
+.carousel-arrow-next
+{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #77d184;
+}
+
+.arrow-text p
+{
+    font-size: 2.5em;
+    color: #fff;
+    text-align: center;
+}
+.arrow-text p:hover{
+    color: #000;
+}
+
+.focusView {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+}
+
+.focusView a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+}
+
+.focusView a:hover{
+    color: #f1f1f1;
+}
+
+.focusView .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .focusView {padding-top: 15px;}
+  .focusView a {font-size: 18px;}
 }

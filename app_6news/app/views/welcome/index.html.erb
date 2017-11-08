@@ -1,12 +1,20 @@
 <div class="wrapper"></div>
 
+<div id="focusView" class="focusView">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
 <div class="row">
 
 	<div class="col-xs-3">
 	    <nav id="sidebar">
 	        <!-- Sidebar Header -->
 	        <div class="sidebar-header">
-	            <h3>5 News</h3>
+	            <h3>Lota Nuus</h3>
 	        </div>
 
 	        <!-- Sidebar Links -->
@@ -29,7 +37,7 @@
 				                <div class="item active">
 				                    <div class="carousel-content">
 				                        <div>
-				                            <p>DEM DEFEATS TRUMP PLAYBOOK IN VA
+				                            <p onclick="openNav()">DEM DEFEATS TRUMP PLAYBOOK IN VA
 </p>
 				                        </div>
 				                    </div>
@@ -37,25 +45,35 @@
 				                <div class="item">
 				                    <div class="carousel-content">
 				                        <div>             
-				                            <p>Two</p>
+				                            <p onclick="openNav()">Two</p>
 				                        </div>
 				                    </div>
 				                </div>
 				                <div class="item">
 				                    <div class="carousel-content">
 				                        <div>                          
-				                            <p>Three</p>
+				                            <p onclick="openNav()">Three</p>
 				                        </div>
 				                    </div>
 				                </div>
 				            </div>
-						    <!-- Controls --> 
-						    <a class="left carousel-control" href="#text-carousel<%="#{i}"%>" data-slide="prev"></a>
-						 	<a class="right carousel-control" href="#text-carousel<%="#{i}"%>" data-slide="next"></a>
 						</div>
 			    	</div>
 				</div>
 	 	<% end %>
+
+
+		<div class="row">
+			<div id="click-prev" class="col-xs-12 carousel-arrow-prev arrow-text">
+			   	<p>< <</p>	
+			</div>
+		</div>
+		<div class="row">
+			<div id="click-next" class="col-xs-12  carousel-arrow-next arrow-text">
+			   	<p>> ></p>	
+			</div>
+		</div>
+
  	</div>
 
 </div>
