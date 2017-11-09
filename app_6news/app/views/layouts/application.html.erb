@@ -12,6 +12,9 @@
     <!-- https://stackoverflow.com/questions/32960846/bootstrap-carousel-not-working-rails -->
   	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+	<%= javascript_include_tag "news" %>
+
 	<script>
    	 
 	$( document ).ready(function(){
@@ -38,12 +41,17 @@
 
 	<script>
 		function openNav(owner) {
+
+		    var title = owner.innerHTML;
+
+			var link = parseNewsForLink(<%= news_get_json.html_safe %>, title);
+			var body = parseNewsForBody(<%= news_get_json.html_safe %>, title);
+
 		    document.getElementById("focusView").style.width = "100%";
 
-		    document.getElementById("focus-view-title").innerHTML = owner.innerHTML;
-		    document.getElementById("focus-view-title").href = "http://google.com";
-		    
-		    document.getElementById("focus-view-body").innerHTML = "FILLER TEXT";
+		    document.getElementById("focus-view-title").innerHTML = title;
+		    document.getElementById("focus-view-title").href = link;
+		    document.getElementById("focus-view-body").innerHTML = body;
 		}
 
 		function closeNav() {
